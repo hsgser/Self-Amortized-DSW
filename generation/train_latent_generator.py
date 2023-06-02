@@ -2,6 +2,7 @@ import os
 import os.path as osp
 import random
 import sys
+sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 import warnings
 
 # deepul borrowed from https://github.com/rll/deepul
@@ -18,7 +19,6 @@ from tqdm import tqdm
 
 warnings.filterwarnings("ignore")
 ptu.set_gpu_mode(True)
-sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 
 
 def seed_worker(worker_id):

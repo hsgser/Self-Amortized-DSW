@@ -1,11 +1,9 @@
 import os.path as osp
 import sys
+sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 
 import torch
 from add_noise_to_data.interface import NoiseAdd_er
-
-
-sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 
 
 class RandomNoiseAdder(NoiseAdd_er):

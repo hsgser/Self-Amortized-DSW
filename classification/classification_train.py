@@ -2,6 +2,7 @@ import os
 import os.path as osp
 import random
 import sys
+sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 
 import numpy as np
 import torch
@@ -15,9 +16,6 @@ from torch.optim import SGD, Adam
 from tqdm import tqdm
 from trainer import ClassifierTrainer
 from utils.utils import initialize_main
-
-
-sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 
 
 def seed_worker(worker_id):

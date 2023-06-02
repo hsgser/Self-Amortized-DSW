@@ -1,11 +1,9 @@
 import os.path as osp
 import sys
+sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 
 import torch.nn as nn
 from metrics_from_point_flow.evaluation_metrics import emd_approx
-
-
-sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 
 
 class EMD(nn.Module):

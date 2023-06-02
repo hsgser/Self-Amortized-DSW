@@ -1,10 +1,8 @@
 import os.path as osp
 import sys
+sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 
 import torch
-
-
-sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 
 
 class AEEvaluator:

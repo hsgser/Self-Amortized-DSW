@@ -6,6 +6,7 @@ import random
 import shutil
 import statistics
 import sys
+sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 import time
 
 import matplotlib.pyplot as plt
@@ -19,9 +20,6 @@ from loss import EMD, SWD, Chamfer
 from models import PointCapsNet, PointNetAE
 from tqdm import tqdm
 from utils import load_model_for_evaluation
-
-
-sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 
 
 def seed_worker(worker_id):

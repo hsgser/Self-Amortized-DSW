@@ -1,6 +1,7 @@
 import os.path as osp
 import random
 import sys
+sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 
 import numpy as np
 import torch
@@ -12,9 +13,6 @@ from generation.train_latent_generator import MLPGenerator
 from models import PointNetAE
 from torch.utils.data import DataLoader
 from utils import evaluate_on_dataset, initialize_main, load_model_for_evaluation
-
-
-sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 
 
 def seed_worker(worker_id):

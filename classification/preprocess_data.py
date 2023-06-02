@@ -1,6 +1,7 @@
 import os.path as osp
 import random
 import sys
+sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 
 import numpy as np
 import torch
@@ -10,9 +11,6 @@ from dataset import ModelNet40
 from models import PointCapsNet, PointNetAE
 from tqdm import tqdm
 from utils import create_save_folder, initialize_main, load_model_for_evaluation
-
-
-sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 
 
 def seed_worker(worker_id):

@@ -1,6 +1,7 @@
 import os.path as osp
 import sys
 import warnings
+sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 
 import numpy as np
 import torch
@@ -8,9 +9,6 @@ from numpy.linalg import norm
 from scipy.stats import entropy
 from sklearn.neighbors import NearestNeighbors
 from tqdm import tqdm
-
-
-sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 
 # Import CUDA version of approximate EMD, from https://github.com/zekunhao1995/pcgan-pytorch/
 try:

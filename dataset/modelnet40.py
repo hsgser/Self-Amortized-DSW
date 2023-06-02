@@ -1,13 +1,12 @@
 import glob
 import os.path as osp
 import sys
+sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 
 import h5py
 import numpy as np
 import torch.utils.data as data
 
-
-sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 try:
     from utils import pc_normalize, sample_pc
 except:

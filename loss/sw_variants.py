@@ -1,14 +1,12 @@
 import os.path as osp
 import sys
+sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 
 import torch
 import torch.nn as nn
 from torch.autograd import Variable
 
 from .von_mises_fisher import VonMisesFisher
-
-
-sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 
 
 def minibatch_rand_projections(batchsize, dim, num_projections=1000, device="cuda", **kwargs):

@@ -2,6 +2,7 @@ import os
 import os.path as osp
 import random
 import sys
+sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 
 import numpy as np
 import torch
@@ -11,9 +12,6 @@ from classifier import MLPClassifier
 from dataset.modelnet40 import LatentCapsulesModelNet40, LatentVectorsModelNet40
 from tqdm import tqdm
 from utils.utils import initialize_main, load_model_for_evaluation
-
-
-sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 
 
 def seed_worker(worker_id):

@@ -1,13 +1,11 @@
 import os.path as osp
 import sys
+sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 
 import torch
 import torch.nn as nn
 from criteria_comparing_sets_pcs.jsd_calculator import JsdCalculator
 from metrics_from_point_flow.evaluation_metrics import compute_all_metrics
-
-
-sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 
 
 class AllMetricsCalculator(nn.Module):

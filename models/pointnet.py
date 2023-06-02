@@ -1,12 +1,10 @@
 import os.path as osp
 import sys
+sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-
-
-sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 
 
 class PointNetEncoder(nn.Module):

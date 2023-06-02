@@ -2,6 +2,7 @@ from __future__ import print_function
 
 import os.path as osp
 import sys
+sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 from collections import OrderedDict
 
 import torch
@@ -10,9 +11,6 @@ import torch.nn.functional as F
 import torch.nn.parallel
 import torch.utils.data
 from torch.autograd import Variable
-
-
-sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
 
 
 class ConvLayer(nn.Module):
