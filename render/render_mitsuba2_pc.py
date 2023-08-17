@@ -153,7 +153,7 @@ def main(argv):
 
     pathToFile = argv[1]
     if len(argv) == 2:
-        color_name == "rainbow"
+        color_name = "rainbow"
     else:
         color_name = argv[2]
 
